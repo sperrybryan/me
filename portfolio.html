@@ -1,0 +1,88 @@
+<!doctype html>
+	    <html lang="en">
+    <head>
+	    <meta charset="utf-8">
+	    <title>Portfolio</title>
+	    <link rel="stylesheet" href="style.css">
+	    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Monoton|Quicksand" rel="stylesheet">
+	    </head>
+    <body>
+       <header class="header">
+      <p>Bryan Sperry</p>
+    </header>
+      <ul id="menuprimary" style="position: sticky; top: 0;  z-index: 1">
+    <li><a href="index.html">home</a></li>
+    <li><a href="portfolio.html">portfolio</a></li>
+    <li><a href="aboutme.html">about me</a></li>
+    </ul>
+        <h1 class="title">my portfolio</h1>
+        <a target="_blank" href="https://scratch.mit.edu/projects/285271261/">
+        <img src="images/scratchlogo.png" height="100">
+        </a>
+        <br>
+        <p class="p">This is a Scratch Game I made called food fight. Use the arrow keys and WASD to move the characters and space/0 to throw food.</p>
+        <br>
+        <img src="images/GAMESCREEN.PNG" height="400">
+        <img src="images/GAMEBLOCKS.PNG" height="400">
+        <br>
+        <p class="p">We made a Sudoku game in MIT App Inventor. There are two levels of different difficulties and an Instructions screen. The app uses touchscreen technology to work.</p>
+        <br>
+         <iframe id="if" height="400px" width="60%" src="https://repl.it/@sperrybryan/Interactive-Fiction1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <img src="images/seahorsekangaroo.png" height="400">
+        <br>
+        <p class="p">Try our Interactive fiction made using Python! It's a story about a seahorse and a kangaroo based on the voyage and return plot. Try to survive till the happy ending!</p>
+        <br>
+        <iframe id="python" height="400px" width="60%" src="https://repl.it/@sperrybryan/roman-numeral?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+	    <img src="images/canopy.PNG" height="400px">
+	    <br>
+	    <p class="p">Try our Roman Numeral Converter made using Python! It can convert to and from Roman Numerals for any number less than 4,000. Have Fun!</p>
+	    <br>
+	    <img src="images/stockphoto.PNG" height="400px">
+	    <p class="p">This is an image I manipulated in Python so that there would be Emilia Clarke pointing to an underwater nun and laughing. I also flipped it.</p>
+	    <img src="images/gui.PNG" height="400px">
+	    <p class="p">This is a GUI we created in Python. You can control the amount it rotates how much smaller it gets each time, and some other things.</p>
+	    <img src="images/twilightgraphboring.PNG" height="400px">
+	    <p class="p">This is a graph that shows the frequency of words in arguably the worst book series ever, Twilight.</p>
+	    <img src="images/finalthinh.PNG" height="400px"><img src="images/finalthingccoer.PNG" height=400px>
+	    <p class="p">This is some code I modified in netlogo to do stuff.</p>
+	    </div>
+	    </div>
+	    </body>
+	    <script>
+     ;(function (window, document, undefined) {
+	'use strict';
+	if (!('localStorage' in window)) return;
+	var nightMode = localStorage.getItem('gmtNightMode');
+	if (nightMode) {
+		document.documentElement.className += 'nightmode';
+	}
+})(window, document);
+
+
+;(function (window, document, undefined) {
+
+	'use strict';
+
+	if (!('localStorage' in window)) return;
+
+	var nav = document.querySelector('#menuprimary');
+	if (!nav) return;
+
+	nav.innerHTML += '<li style="float:right!important" id="nightmode"><a role="button" href="#">toggle night mode</a></li>';
+
+	var nightMode = document.querySelector('#nightmode');
+	if (!nightMode) return;
+
+	nightMode.addEventListener('click', function (event) {
+		event.preventDefault();
+		document.documentElement.classList.toggle('nightmode');
+		if ( document.documentElement.classList.contains('nightmode') ) {
+			localStorage.setItem('gmtNightMode', true);
+			return;
+		}
+		localStorage.removeItem('gmtNightMode');
+	}, false);
+
+})(window, document);
+    </script>
+</html>

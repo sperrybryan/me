@@ -1,0 +1,129 @@
+<!doctype html>
+    <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Monoton|Quicksand" rel="stylesheet">
+    </head>
+  <body>
+       <header class="header">
+      <p>Bryan Sperry</p>
+    </header>
+   <ul id="menuprimary" style="position: sticky; top: 0; z-index: 1">
+    <li><a href="index.html">home</a></li>
+    <li><a href="portfolio.html">portfolio</a></li>
+    <li><a href="aboutme.html">about me</a></li>
+    </ul>
+    <h1 class="title">about me</h1>
+    <br>
+     <div class="row">
+         <div class="column">
+     <div class="container">
+     <img class="image" src="images/sierras.JPG">
+         <div class="caption">Hiking is an 11/10 activity - especially in the Sierra Nevadas</div>
+         </div>
+    <div class="container">
+     <img class="image" src="images/game.jpg">
+         <div class="caption">I'm a senior at Rancho Bernardo High School</div>
+     </div>
+     <div class="container">
+     <img class="image" src="images/sunset.jpg">
+         <div class="caption">Sunset watching with friends&gt&gt&gt&gt&gt</div>
+     </div>
+     <div class="container">
+     <img class="image" src="images/jada.jpg">
+         <div class="caption">Jada's a pretty cool gal I vault with</div>
+     </div>
+     <div class="container">
+     <img class="image" src="images/germany.jpg">
+         <div class="caption">I did an exchange trip to Germany</div>
+     </div>
+   </div>
+   <div class="column">
+     
+    <div class="container">
+     <img class="image" src="images/barefooting.JPG">
+         <div class="caption">In my spare time I ski barefoot</div>
+     </div>
+     <div class="container">
+     <img class="image" src="images/art2.jpg">
+         <div class="caption">Modern art is my boo thang</div>
+         </div>
+     <div class="container">
+     <img class="image" src="images/camping.JPG">
+         <div class="caption">The desert is really the best place to go camping</div>
+     </div>
+     <div class="container">
+     <img class="image" src="images/climbing.jpg">
+         <div class="caption">Climbing is hard and I'm not very good at it</div>
+     </div>
+     <div class="container">
+     <img class="image" src="images/waterfall.jpg">
+         <div class="caption">I take photos of things in nature</div>
+     </div>
+   </div>
+   <div class="column">
+     <div class="container">
+     <img class="image" src="images/lake.jpg">
+         <div class="caption">I was practically raised at Lake Nacimiento</div>
+     </div>
+    <div class="container">
+     <img class="image" src="images/timo.jpg">
+         <div class="caption">My german pal visited me again this summer</div>
+     </div>
+     <div class="container">
+     <img class="image" src="images/stars.JPG">
+         <div class="caption">Stargazing is the coolest thing to ever exist</div>
+         </div>
+     <div class="container">
+     <img class="image" src="images/vault.jpg">
+         <div class="caption">I fling myself through the air for fun</div>
+     </div>
+     <div class="container">
+     <img class="image" src="images/ocean.jpg">
+         <div class="caption">I have a terrible sock tan</div>
+     </div>
+   </div>
+    </div>
+    <br>
+    <br>
+    </body>
+    <script>
+     ;(function (window, document, undefined) {
+	'use strict';
+	if (!('localStorage' in window)) return;
+	var nightMode = localStorage.getItem('gmtNightMode');
+	if (nightMode) {
+		document.documentElement.className += 'nightmode';
+	}
+})(window, document);
+
+
+;(function (window, document, undefined) {
+
+	'use strict';
+
+	if (!('localStorage' in window)) return;
+
+	var nav = document.querySelector('#menuprimary');
+	if (!nav) return;
+
+	nav.innerHTML += '<li style="float:right!important" id="nightmode"><a role="button" href="#">toggle night mode</a></li>';
+
+	var nightMode = document.querySelector('#nightmode');
+	if (!nightMode) return;
+
+	nightMode.addEventListener('click', function (event) {
+		event.preventDefault();
+		document.documentElement.classList.toggle('nightmode');
+		if ( document.documentElement.classList.contains('nightmode') ) {
+			localStorage.setItem('gmtNightMode', true);
+			return;
+		}
+		localStorage.removeItem('gmtNightMode');
+	}, false);
+
+})(window, document);
+    </script>
+</html>
