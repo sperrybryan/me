@@ -1,12 +1,22 @@
 .nightmode body {
       background-image: url('images/giphy.gif');
     }
+
+p {
+  margin:0;
+  padding:0;
+}
+body{
+  margin:0;
+  padding:0;
+}
+
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   overflow: hidden;
-  background-color: lightseagreen;
+  background-color: white; /*lightseagreen;*/
   font-family: 'Major Mono Display', monospace;
 }
 
@@ -23,13 +33,12 @@ li a:hover {
 }
 
 .header {
-  color: red; /*black:*/
-  padding-left: 20px;
-  padding: 2px 20px;
+  color: darkblue; /*black:*/
+  padding: 0px 20px;
   font-family: 'Monoton', cursive;
-  text-shadow: 6px 4px blue; /*lightseagreen;*/
-  letter-spacing: 5px;
-  font-size: 95vw;
+  text-shadow: 6px 4px 2px cyan; /*lightseagreen;*/
+  letter-spacing: .4vw;
+  font-size: 9vw;
   background-color: white; /*#bef4f1;*/
 }
 
@@ -59,7 +68,7 @@ button {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #000033;
+  background-color: #00001199;
   font-family: 'Major Mono Display', monospace;
 }
 
@@ -76,8 +85,8 @@ li {
 }
 
 .nightmode li a:hover {
-  background-color: #555;
-  color:black;
+  background-color: #2d000099;/*#555;*/
+  color: silver;
 }
 
 .nightmode .header {
@@ -86,9 +95,10 @@ li {
   padding: 2px 20px;
   font-family: 'Monoton', cursive;
   text-shadow: -6px -4px #4d0000;
-  letter-spacing: 5px;
-  font-size: 300%;
-  background-color: #111
+  letter-spacing: .4vw;
+  font-size: 9vw;
+  background-color: #1110;
+  /*background-color: #111*/
 }
 
 .nightmode .title {
